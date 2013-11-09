@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>FC19C8AE-3912-445F-919A-260BE1F4B242</string>
+	<string>0026DE3F-88B8-452A-9E28-C2602104843E</string>
 	<key>IDESourceControlProjectName</key>
 	<string>ACE Interface</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,11 +14,11 @@
 		<string>https://github.com/h1994st/ACE-interface.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ACE Interface.xcodeproj/project.xcworkspace</string>
+	<string>ACE Interface/ACE Interface.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>8804B3A9-0A81-4C35-90A3-223E3D20C35C</key>
-		<string>../..</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/h1994st/ACE-interface.git</string>
