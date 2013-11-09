@@ -20,6 +20,13 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+//    [super viewWillAppear:animated];
+//    self.mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, 320, 460)];
+//    self.mapView.delegate = self;
+//    [self.view addSubview:self.mapView];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
