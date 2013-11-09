@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FC19C8AE-3912-445F-919A-260BE1F4B242</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ACE Interface</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8804B3A9-0A81-4C35-90A3-223E3D20C35C</key>
+		<string>https://github.com/h1994st/ACE-interface.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ACE Interface.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8804B3A9-0A81-4C35-90A3-223E3D20C35C</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/h1994st/ACE-interface.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8804B3A9-0A81-4C35-90A3-223E3D20C35C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8804B3A9-0A81-4C35-90A3-223E3D20C35C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ACE-interface</string>
+		</dict>
+	</array>
+</dict>
+</plist>
