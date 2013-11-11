@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2039A554182E1DE80073450C /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2039A553182E1DE80073450C /* AMap.bundle */; };
+		207CD985182E28A6005C9CDC /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 207CD984182E28A6005C9CDC /* libstdc++.dylib */; };
 		20B36555182E180F009AEA93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B36554182E180F009AEA93 /* Foundation.framework */; };
 		20B36557182E180F009AEA93 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B36556182E180F009AEA93 /* CoreGraphics.framework */; };
 		20B36559182E180F009AEA93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B36558182E180F009AEA93 /* UIKit.framework */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		2039A553182E1DE80073450C /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMap.bundle; sourceTree = "<group>"; };
+		207CD984182E28A6005C9CDC /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		20B36551182E180F009AEA93 /* ACE Interface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ACE Interface.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B36554182E180F009AEA93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		20B36556182E180F009AEA93 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -80,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				207CD985182E28A6005C9CDC /* libstdc++.dylib in Frameworks */,
 				20B3659A182E1A4C009AEA93 /* Security.framework in Frameworks */,
 				20B36598182E1A45009AEA93 /* libstdc++.6.0.9.dylib in Frameworks */,
 				20B36596182E1A32009AEA93 /* OpenGLES.framework in Frameworks */,
@@ -131,6 +134,7 @@
 		20B36553182E180F009AEA93 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				207CD984182E28A6005C9CDC /* libstdc++.dylib */,
 				20B36599182E1A4C009AEA93 /* Security.framework */,
 				20B36597182E1A45009AEA93 /* libstdc++.6.0.9.dylib */,
 				20B36595182E1A32009AEA93 /* OpenGLES.framework */,

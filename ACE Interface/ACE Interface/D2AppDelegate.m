@@ -7,12 +7,14 @@
 //
 
 #import "D2AppDelegate.h"
+#import <MAMapKit/MAMapKit.h>
 
 @implementation D2AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [MAMapServices sharedServices].apiKey = @"0e377a8ce406bfb79e0fb35656a3730b";
     return YES;
 }
 							

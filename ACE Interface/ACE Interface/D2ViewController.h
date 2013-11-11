@@ -11,6 +11,8 @@
 
 @interface D2ViewController : UIViewController <MAMapViewDelegate>
 
-//@property (nonatomic, strong) MAMapView *mapView;
+@property (nonatomic, strong) MAMapView *mapView;
+
+- (void)returnAction;
 
 @end
