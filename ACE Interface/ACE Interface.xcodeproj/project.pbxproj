@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2039A554182E1DE80073450C /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2039A553182E1DE80073450C /* AMap.bundle */; };
 		207CD985182E28A6005C9CDC /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 207CD984182E28A6005C9CDC /* libstdc++.dylib */; };
 		20B36555182E180F009AEA93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B36554182E180F009AEA93 /* Foundation.framework */; };
 		20B36557182E180F009AEA93 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B36556182E180F009AEA93 /* CoreGraphics.framework */; };
@@ -32,6 +31,7 @@
 		20B36596182E1A32009AEA93 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B36595182E1A32009AEA93 /* OpenGLES.framework */; };
 		20B36598182E1A45009AEA93 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B36597182E1A45009AEA93 /* libstdc++.6.0.9.dylib */; };
 		20B3659A182E1A4C009AEA93 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B36599182E1A4C009AEA93 /* Security.framework */; };
+		4B75E2691830FCE0002FDF14 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4B75E2681830FCE0002FDF14 /* AMap.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2039A553182E1DE80073450C /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMap.bundle; sourceTree = "<group>"; };
 		207CD984182E28A6005C9CDC /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		20B36551182E180F009AEA93 /* ACE Interface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ACE Interface.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B36554182E180F009AEA93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -75,6 +74,7 @@
 		20B36595182E1A32009AEA93 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		20B36597182E1A45009AEA93 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 		20B36599182E1A4C009AEA93 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4B75E2681830FCE0002FDF14 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMap.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +114,7 @@
 		20B36548182E180F009AEA93 = {
 			isa = PBXGroup;
 			children = (
-				2039A553182E1DE80073450C /* AMap.bundle */,
+				4B75E2681830FCE0002FDF14 /* AMap.bundle */,
 				20B3655A182E180F009AEA93 /* ACE Interface */,
 				20B36579182E180F009AEA93 /* ACE InterfaceTests */,
 				20B36553182E180F009AEA93 /* Frameworks */,
@@ -274,7 +274,7 @@
 			files = (
 				20B3656D182E180F009AEA93 /* Images.xcassets in Resources */,
 				20B3655F182E180F009AEA93 /* InfoPlist.strings in Resources */,
-				2039A554182E1DE80073450C /* AMap.bundle in Resources */,
+				4B75E2691830FCE0002FDF14 /* AMap.bundle in Resources */,
 				20B36568182E180F009AEA93 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +428,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/tomhu/Documents/Private/Project/ACE-interface/AMap_iOS_API_Lib_V2.1.2/3D",
+					"/Users/lc/Desktop/项目/ACE-interface/AMap_iOS_API_Lib_V2.1.2/2D",
+					"/Users/lc/Desktop/项目/ACE-interface/AMap_iOS_API_Lib_V2.1.2/3D",
+					"/Users/lc/Desktop/项目/ACE-interface/AMap_iOS_API_Lib_V2.1.2/Search",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ACE Interface/ACE Interface-Prefix.pch";
@@ -447,6 +450,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/tomhu/Documents/Private/Project/ACE-interface/AMap_iOS_API_Lib_V2.1.2/3D",
+					"/Users/lc/Desktop/项目/ACE-interface/AMap_iOS_API_Lib_V2.1.2/2D",
+					"/Users/lc/Desktop/项目/ACE-interface/AMap_iOS_API_Lib_V2.1.2/3D",
+					"/Users/lc/Desktop/项目/ACE-interface/AMap_iOS_API_Lib_V2.1.2/Search",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ACE Interface/ACE Interface-Prefix.pch";
