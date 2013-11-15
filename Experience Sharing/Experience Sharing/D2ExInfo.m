@@ -8,6 +8,38 @@
 
 #import "D2ExInfo.h"
 
+@interface D2ExInfo ()
+
+
+@end
+
 @implementation D2ExInfo
+
+#pragma mark - Properities
+
+- (NSMutableArray *)tagList {
+    if (_tagList == nil) {
+        _tagList = [[NSMutableArray alloc] init];
+    }
+    return _tagList;
+}
+
+#pragma mark - Methods
+
+- (void)addTag:(NSString *)tag {
+    [self.tagList addObject:tag];
+}
+
+- (void)removeTag:(NSString *)tag {
+    [self.tagList removeObject:tag];
+}
+
+- (void)setInfoOwner:(NSString *)owner
+       questionTitle:(NSString *)questionTitle
+     questionContent:(NSString *)questionContent {
+    self.owner = owner;
+    self.questionTitle = questionTitle;
+    self.questionContent = questionContent;
+}
 
 @end

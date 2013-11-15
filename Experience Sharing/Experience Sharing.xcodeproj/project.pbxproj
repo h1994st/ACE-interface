@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2006E6511836083100B19B11 /* D2ExInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2006E6501836083100B19B11 /* D2ExInfoCell.m */; };
 		20A7BEDA1835113E000392C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20A7BED91835113E000392C1 /* Foundation.framework */; };
 		20A7BEDC1835113E000392C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20A7BEDB1835113E000392C1 /* CoreGraphics.framework */; };
 		20A7BEDE1835113E000392C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20A7BEDD1835113E000392C1 /* UIKit.framework */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2006E64F1836083100B19B11 /* D2ExInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = D2ExInfoCell.h; sourceTree = "<group>"; };
+		2006E6501836083100B19B11 /* D2ExInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = D2ExInfoCell.m; sourceTree = "<group>"; };
 		20A7BED61835113E000392C1 /* Experience Sharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Experience Sharing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20A7BED91835113E000392C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		20A7BEDB1835113E000392C1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2006E64E1836074900B19B11 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				2006E64F1836083100B19B11 /* D2ExInfoCell.h */,
+				2006E6501836083100B19B11 /* D2ExInfoCell.m */,
+			);
+			name = CustomCells;
+			sourceTree = "<group>";
+		};
 		20A7BECD1835113E000392C1 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +131,7 @@
 				20A7BEE91835113E000392C1 /* D2AppDelegate.m */,
 				20A7BEEB1835113E000392C1 /* Main.storyboard */,
 				20C8D42F18353BB4001C4212 /* ViewControllers */,
+				2006E64E1836074900B19B11 /* CustomCells */,
 				20C8D43018353BE2001C4212 /* Data */,
 				20A7BEF11835113E000392C1 /* Images.xcassets */,
 				20A7BEE01835113E000392C1 /* Supporting Files */,
@@ -271,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2006E6511836083100B19B11 /* D2ExInfoCell.m in Sources */,
 				20C8D43318353C10001C4212 /* D2ExInfo.m in Sources */,
 				20A7BEEA1835113E000392C1 /* D2AppDelegate.m in Sources */,
 				20A7BEE61835113E000392C1 /* main.m in Sources */,

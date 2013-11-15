@@ -21,11 +21,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nlB-OJ-nxX" userLabel="Button View">
-                                        <rect key="frame" x="0.0" y="0.0" width="107" height="768"/>
+                                        <rect key="frame" x="15" y="0.0" width="110" height="768"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="weO-yI-ND1">
-                                                <rect key="frame" x="0.0" y="0.0" width="107" height="246"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="246"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -34,9 +34,12 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="experienceBoxButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IkB-p5-DL1"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="i9F-7J-6A8">
-                                                <rect key="frame" x="0.0" y="261" width="107" height="246"/>
+                                                <rect key="frame" x="0.0" y="261" width="100" height="246"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -45,9 +48,12 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="myQuestionButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YUM-5k-mKt"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Gnx-yA-H54">
-                                                <rect key="frame" x="0.0" y="522" width="107" height="246"/>
+                                                <rect key="frame" x="0.0" y="522" width="100" height="246"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -56,6 +62,9 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="myAnswerButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eUd-5g-puw"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -67,129 +76,325 @@
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dZN-ur-FWy" userLabel="View Three ">
                                                 <rect key="frame" x="0.0" y="0.0" width="708" height="768"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="McB-Cb-bga" userLabel="View Two">
-                                                <rect key="frame" x="0.0" y="0.0" width="708" height="768"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aBI-QM-nxC" userLabel="View One">
-                                                <rect key="frame" x="0.0" y="0.0" width="708" height="768"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="S9l-Ja-4gJ">
-                                                        <rect key="frame" x="0.0" y="17" width="701" height="44"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                        <textInputTraits key="textInputTraits" autocorrectionType="yes"/>
-                                                        <connections>
-                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="y68-yA-jtv"/>
-                                                        </connections>
-                                                    </searchBar>
-                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vnv-vB-Osy" userLabel="Label View">
-                                                        <rect key="frame" x="0.0" y="72" width="701" height="203"/>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RDu-Oo-X28" userLabel="Tag View">
+                                                        <rect key="frame" x="7" y="72" width="694" height="203"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gE-EE-uDz">
-                                                                <rect key="frame" x="275" y="37" width="150" height="40"/>
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSy-V4-DX5" userLabel="Button Two - 车祸">
+                                                                <rect key="frame" x="268" y="37" width="150" height="40"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                                <state key="normal" title="车祸">
+                                                                <state key="normal" title="2">
                                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dF1-zI-h5q">
-                                                                <rect key="frame" x="275" y="127" width="150" height="40"/>
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yci-7Z-W0B" userLabel="Button Five - 车祸">
+                                                                <rect key="frame" x="268" y="127" width="150" height="40"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                                <state key="normal" title="车祸">
+                                                                <state key="normal" title="5">
                                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nI5-Mv-bLB">
-                                                                <rect key="frame" x="463" y="37" width="150" height="40"/>
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2h-b4-fxL" userLabel="Button Three - 车祸">
+                                                                <rect key="frame" x="456" y="37" width="150" height="40"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                                <state key="normal" title="车祸">
+                                                                <state key="normal" title="3">
                                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l41-Sr-AgK">
-                                                                <rect key="frame" x="463" y="127" width="150" height="40"/>
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEa-z7-QjF" userLabel="Button Six - 车祸">
+                                                                <rect key="frame" x="456" y="127" width="150" height="40"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                                <state key="normal" title="车祸">
+                                                                <state key="normal" title="6">
                                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNr-Nd-gDD">
-                                                                <rect key="frame" x="87" y="37" width="150" height="40"/>
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgi-l3-sUm" userLabel="Button One - 车祸">
+                                                                <rect key="frame" x="80" y="37" width="150" height="40"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                                <state key="normal" title="车祸">
+                                                                <state key="normal" title="1">
                                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dJ-mu-iuv">
-                                                                <rect key="frame" x="87" y="127" width="150" height="40"/>
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R05-hS-Ffw" userLabel="Button Four - 车祸">
+                                                                <rect key="frame" x="80" y="127" width="150" height="40"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                                <state key="normal" title="车祸">
+                                                                <state key="normal" title="4">
                                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     </view>
-                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" sectionIndexMinimumDisplayRowCount="5" rowHeight="50" sectionHeaderHeight="17" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VJv-VT-H8X">
-                                                        <rect key="frame" x="0.0" y="309" width="701" height="419"/>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" sectionIndexMinimumDisplayRowCount="5" rowHeight="74" sectionHeaderHeight="10" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="Jgh-DU-SoC">
+                                                        <rect key="frame" x="7" y="309" width="694" height="430"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <prototypes>
-                                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ETa-VL-WrD">
-                                                                <rect key="frame" x="0.0" y="17" width="701" height="50"/>
+                                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="exInfoCell" editingAccessoryType="detailDisclosureButton" rowHeight="84" id="Pgr-gA-Tlr" customClass="D2ExInfoCell">
+                                                                <rect key="frame" x="0.0" y="55" width="694" height="84"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ETa-VL-WrD" id="F6S-QY-NGt">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="701" height="49"/>
+                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pgr-gA-Tlr" id="hCN-tg-HZN">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="661" height="83"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我是问题？" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4i-5u-nUr">
+                                                                            <rect key="frame" x="20" y="17" width="448" height="25"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="阿萨德发的沙发上打发生的发生都发生的发生都发生大风阿萨德发的沙发上打发生的发生都发生的发生都发生大风阿萨德发的沙发上打发生的发生都发生的发生都发生大风" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAr-iX-vZh">
+                                                                            <rect key="frame" x="20" y="45" width="563" height="21"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                            <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
                                                                 </tableViewCellContentView>
-                                                            </tableViewCell>
-                                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tb6-fb-fvq">
-                                                                <rect key="frame" x="0.0" y="67" width="701" height="50"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tb6-fb-fvq" id="sik-Ja-WX5">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="701" height="49"/>
-                                                                    <autoresizingMask key="autoresizingMask"/>
-                                                                </tableViewCellContentView>
-                                                            </tableViewCell>
-                                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="qSo-Ve-nKl">
-                                                                <rect key="frame" x="0.0" y="117" width="701" height="50"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qSo-Ve-nKl" id="bsk-d7-kHz">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="701" height="49"/>
-                                                                    <autoresizingMask key="autoresizingMask"/>
-                                                                </tableViewCellContentView>
-                                                            </tableViewCell>
-                                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KZS-Yx-a17">
-                                                                <rect key="frame" x="0.0" y="167" width="701" height="50"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KZS-Yx-a17" id="UaJ-uC-qaN">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="701" height="49"/>
-                                                                    <autoresizingMask key="autoresizingMask"/>
-                                                                </tableViewCellContentView>
+                                                                <connections>
+                                                                    <outlet property="content" destination="SAr-iX-vZh" id="Lge-eb-eVk"/>
+                                                                    <outlet property="title" destination="j4i-5u-nUr" id="4V3-VN-LRP"/>
+                                                                </connections>
                                                             </tableViewCell>
                                                         </prototypes>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="BX8-2M-YEH"/>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="FkF-he-nyy"/>
+                                                        </connections>
                                                     </tableView>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="1" green="0.43529412150382996" blue="0.81176471710205078" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="McB-Cb-bga" userLabel="View Two">
+                                                <rect key="frame" x="0.0" y="0.0" width="708" height="768"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iBM-pQ-71k" userLabel="Tag View">
+                                                        <rect key="frame" x="7" y="72" width="694" height="203"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <subviews>
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTp-gT-mIh" userLabel="Button Two - 车祸">
+                                                                <rect key="frame" x="268" y="37" width="150" height="40"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="2">
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                            </button>
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZT-NF-XJE" userLabel="Button Five - 车祸">
+                                                                <rect key="frame" x="268" y="127" width="150" height="40"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="5">
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                            </button>
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPj-mB-Rv6" userLabel="Button Three - 车祸">
+                                                                <rect key="frame" x="456" y="37" width="150" height="40"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="3">
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                            </button>
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xm-pN-ng9" userLabel="Button Six - 车祸">
+                                                                <rect key="frame" x="456" y="127" width="150" height="40"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="6">
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                            </button>
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCS-S9-MHe" userLabel="Button One - 车祸">
+                                                                <rect key="frame" x="80" y="37" width="150" height="40"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="1">
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                            </button>
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gx4-oe-1aY" userLabel="Button Four - 车祸">
+                                                                <rect key="frame" x="80" y="127" width="150" height="40"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="4">
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" sectionIndexMinimumDisplayRowCount="5" rowHeight="74" sectionHeaderHeight="10" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="F9Q-qi-QvT">
+                                                        <rect key="frame" x="7" y="309" width="694" height="430"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <prototypes>
+                                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="exInfoCell" editingAccessoryType="detailDisclosureButton" rowHeight="84" id="Pix-3b-7Y1" customClass="D2ExInfoCell">
+                                                                <rect key="frame" x="0.0" y="55" width="694" height="84"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pix-3b-7Y1" id="XQK-nq-jI9">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="661" height="83"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我是问题？" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHb-Wl-TzN">
+                                                                            <rect key="frame" x="20" y="17" width="448" height="25"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="阿萨德发的沙发上打发生的发生都发生的发生都发生大风阿萨德发的沙发上打发生的发生都发生的发生都发生大风阿萨德发的沙发上打发生的发生都发生的发生都发生大风" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRq-cw-wrR">
+                                                                            <rect key="frame" x="20" y="45" width="563" height="21"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                            <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </tableViewCellContentView>
+                                                                <connections>
+                                                                    <outlet property="content" destination="qRq-cw-wrR" id="vXu-Wb-F7S"/>
+                                                                    <outlet property="title" destination="LHb-Wl-TzN" id="DKc-1T-w01"/>
+                                                                </connections>
+                                                            </tableViewCell>
+                                                        </prototypes>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="cdg-2y-8cE"/>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="iWG-yI-QcD"/>
+                                                        </connections>
+                                                    </tableView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aBI-QM-nxC" userLabel="View One">
+                                                <rect key="frame" x="0.0" y="0.0" width="708" height="768"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="S9l-Ja-4gJ">
+                                                        <rect key="frame" x="7" y="17" width="694" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="yes"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="y68-yA-jtv"/>
+                                                        </connections>
+                                                    </searchBar>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vnv-vB-Osy" userLabel="Tag View">
+                                                        <rect key="frame" x="7" y="72" width="694" height="203"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <subviews>
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gE-EE-uDz" userLabel="Button Two - 车祸">
+                                                                <rect key="frame" x="268" y="37" width="150" height="40"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="2">
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                            </button>
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dF1-zI-h5q" userLabel="Button Five - 车祸">
+                                                                <rect key="frame" x="268" y="127" width="150" height="40"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="5">
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                            </button>
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nI5-Mv-bLB" userLabel="Button Three - 车祸">
+                                                                <rect key="frame" x="456" y="37" width="150" height="40"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="3">
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                            </button>
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l41-Sr-AgK" userLabel="Button Six - 车祸">
+                                                                <rect key="frame" x="456" y="127" width="150" height="40"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="6">
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                            </button>
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNr-Nd-gDD" userLabel="Button One - 车祸">
+                                                                <rect key="frame" x="80" y="37" width="150" height="40"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="1">
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                            </button>
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dJ-mu-iuv" userLabel="Button Four - 车祸">
+                                                                <rect key="frame" x="80" y="127" width="150" height="40"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="4">
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" sectionIndexMinimumDisplayRowCount="5" rowHeight="74" sectionHeaderHeight="10" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="VJv-VT-H8X">
+                                                        <rect key="frame" x="7" y="309" width="694" height="430"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <prototypes>
+                                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="exInfoCell" editingAccessoryType="detailDisclosureButton" rowHeight="84" id="ETa-VL-WrD" customClass="D2ExInfoCell">
+                                                                <rect key="frame" x="0.0" y="55" width="694" height="84"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ETa-VL-WrD" id="F6S-QY-NGt">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="661" height="83"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我是问题？" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXT-R6-jPJ">
+                                                                            <rect key="frame" x="20" y="17" width="448" height="25"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="阿萨德发的沙发上打发生的发生都发生的发生都发生大风阿萨德发的沙发上打发生的发生都发生的发生都发生大风阿萨德发的沙发上打发生的发生都发生的发生都发生大风" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDf-xJ-8yz">
+                                                                            <rect key="frame" x="20" y="45" width="563" height="21"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                            <color key="textColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </tableViewCellContentView>
+                                                                <connections>
+                                                                    <outlet property="content" destination="tDf-xJ-8yz" id="Ztr-gT-jSx"/>
+                                                                    <outlet property="title" destination="QXT-R6-jPJ" id="798-I6-is0"/>
+                                                                </connections>
+                                                            </tableViewCell>
+                                                        </prototypes>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="nbt-p5-0XC"/>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="XdY-QE-zcw"/>
+                                                        </connections>
+                                                    </tableView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.67367951770000001" green="0.060379869529999998" blue="0.1084280953" alpha="1" colorSpace="calibratedRGB"/>
@@ -199,8 +404,38 @@
                     <connections>
                         <outlet property="bgView" destination="8bC-Xf-vdC" id="rau-NZ-Nww"/>
                         <outlet property="buttonView" destination="nlB-OJ-nxX" id="6DU-NW-xa9"/>
+                        <outlet property="exInfoTableView" destination="VJv-VT-H8X" id="0wX-SY-KPN"/>
+                        <outlet property="experienceBox" destination="weO-yI-ND1" id="85l-Q1-Udh"/>
+                        <outlet property="myAnswer" destination="Gnx-yA-H54" id="eFg-kD-dHo"/>
+                        <outlet property="myAnswerTableView" destination="Jgh-DU-SoC" id="6CV-hG-T8w"/>
+                        <outlet property="myAnswerTagFive" destination="yci-7Z-W0B" id="ICv-tt-BaZ"/>
+                        <outlet property="myAnswerTagFour" destination="R05-hS-Ffw" id="5VA-E9-b9L"/>
+                        <outlet property="myAnswerTagOne" destination="mgi-l3-sUm" id="Zos-Mt-UWb"/>
+                        <outlet property="myAnswerTagSix" destination="JEa-z7-QjF" id="2BC-wd-gU3"/>
+                        <outlet property="myAnswerTagThree" destination="b2h-b4-fxL" id="bF3-Al-Y5y"/>
+                        <outlet property="myAnswerTagTwo" destination="PSy-V4-DX5" id="zEp-7h-2na"/>
+                        <outlet property="myQuestion" destination="i9F-7J-6A8" id="L2D-HU-jmk"/>
+                        <outlet property="myQuestionTableView" destination="F9Q-qi-QvT" id="SSz-yt-gcJ"/>
+                        <outlet property="myQuestionTagFive" destination="NZT-NF-XJE" id="M8y-mA-o7j"/>
+                        <outlet property="myQuestionTagFour" destination="gx4-oe-1aY" id="3fK-2i-Sxp"/>
+                        <outlet property="myQuestionTagOne" destination="sCS-S9-MHe" id="uID-HB-B0d"/>
+                        <outlet property="myQuestionTagSix" destination="0xm-pN-ng9" id="16J-Rp-040"/>
+                        <outlet property="myQuestionTagThree" destination="uPj-mB-Rv6" id="TjO-6E-9Vb"/>
+                        <outlet property="myQuestionTagTwo" destination="fTp-gT-mIh" id="Elh-3t-CEd"/>
                         <outlet property="rightBgView" destination="GG7-AN-Sc9" id="6Pc-5N-CQU"/>
                         <outlet property="rightMainView" destination="vn3-3H-nFV" id="Cbl-Kd-l20"/>
+                        <outlet property="tagFive" destination="dF1-zI-h5q" id="qBn-WP-M9m"/>
+                        <outlet property="tagFour" destination="9dJ-mu-iuv" id="IKX-CP-Ifg"/>
+                        <outlet property="tagOne" destination="oNr-Nd-gDD" id="dG4-EI-tvj"/>
+                        <outlet property="tagSix" destination="l41-Sr-AgK" id="CZ0-ah-DgA"/>
+                        <outlet property="tagThree" destination="nI5-Mv-bLB" id="0xw-f3-AJU"/>
+                        <outlet property="tagTwo" destination="5gE-EE-uDz" id="sua-gT-oWK"/>
+                        <outlet property="tagViewOne" destination="vnv-vB-Osy" id="wbE-wB-wQJ"/>
+                        <outlet property="tagViewThree" destination="RDu-Oo-X28" id="ada-gT-ABa"/>
+                        <outlet property="tagViewTwo" destination="iBM-pQ-71k" id="Fyz-RD-W7D"/>
+                        <outlet property="viewOne" destination="aBI-QM-nxC" id="Sgr-CM-9Ss"/>
+                        <outlet property="viewThree" destination="dZN-ur-FWy" id="W29-tP-c2l"/>
+                        <outlet property="viewTwo" destination="McB-Cb-bga" id="oP5-Ji-0Rd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
