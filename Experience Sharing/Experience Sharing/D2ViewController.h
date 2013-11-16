@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "D2InfoDetailView.h"
 
 @interface D2ViewController : UIViewController <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
 
@@ -53,5 +54,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *myAnswerTagFive;
 @property (weak, nonatomic) IBOutlet UIButton *myAnswerTagSix;
 @property (weak, nonatomic) IBOutlet UITableView *myAnswerTableView;
+
+// Info Detail View
+@property (strong, nonatomic) D2InfoDetailView *infoDetailView ;
 
 @end

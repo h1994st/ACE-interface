@@ -9,6 +9,8 @@
 #import "D2ViewController.h"
 #import "D2ExInfo.h"
 #import "D2ExInfoCell.h"
+#import "D2InfoDetailView.h"
+#import "D2AnswerCell.h"
 
 @interface D2ViewController ()
 
@@ -25,6 +27,8 @@
 @property (strong, nonatomic) NSMutableArray *tableViewDataIndexArray;
 @property (strong, nonatomic) NSMutableArray *tableViewDataArray;
 
+@property (strong, nonatomic) D2ExInfo *info;
+
 @end
 
 @implementation D2ViewController
@@ -36,25 +40,7 @@
     self.tableViewDataArray = self.mainDataArray;
     [self.viewOne setHidden:NO];
     
-    // Test
-    D2ExInfo *info1 = [[D2ExInfo alloc] init];
-    [info1 addTag:@"车祸"];
-    [info1 addTag:@"飙车"];
-    [info1 setInfoOwner:@"hahah" questionTitle:@"我能不能睡觉？" questionContent:@"今天很困......."];
-    [self addExInfo:info1];
-    
-    D2ExInfo *info2 = [[D2ExInfo alloc] init];
-    [info2 addTag:@"发疯"];
-    [info2 addTag:@"酒驾"];
-    [info2 addTag:@"车祸"];
-    [info2 setInfoOwner:@"Tom" questionTitle:@"小学妹" questionContent:@"小学妹小学妹小学妹"];
-    [self addExInfo:info2];
-    
-    D2ExInfo *info3 = [[D2ExInfo alloc] init];
-    [info3 setInfoOwner:@"哈哈" questionTitle:@"test" questionContent:@"just for testasdfasdfasdfsdafsadfasdfsadfsafd"];
-    [self addExInfo:info3];
-    
-    NSLog(@"Test Finished");
+    [self addTestData];
     
     [self configureViewOne];
 }
@@ -274,6 +260,32 @@
     }
 }
 
+#pragma mark - Info Detail View Actions
+
+- (IBAction)closeViewButtonClicked:(id)sender {
+    [self.infoDetailView removeFromSuperview];
+}
+
+- (IBAction)answerButtonClicked:(id)sender {
+    [self.info addAnswer:self.infoDetailView.answerTextView.text owner:@"Tom"];
+    
+    NSNumber *index = [NSNumber numberWithInteger:[self.mainDataArray indexOfObject:self.info]];
+    [self.myAnswerIndexArray addObject:index];
+    NSMutableArray *tagList = self.info.tagList;
+    for (NSString *tag in tagList) {
+        NSMutableArray *answerIndexArray = [self.myAnswerDictionary objectForKey:tag];
+        if (!answerIndexArray) {
+            answerIndexArray = [[NSMutableArray alloc] init];
+            [answerIndexArray addObject:index];
+            [self.myAnswerDictionary setObject:answerIndexArray forKey:tag];
+        } else {
+            [answerIndexArray addObject:index];
+        }
+    }
+    
+    [self.infoDetailView.answerTableView reloadData];
+}
+
 #pragma mark - Data
 
 - (void)addExInfo:(D2ExInfo *)exInfo {
@@ -331,36 +343,114 @@
     }
 }
 
+- (void)addTestData {
+    // Test
+    D2ExInfo *info1 = [[D2ExInfo alloc] init];
+    [info1 addTag:@"车祸"];
+    [info1 addTag:@"飙车"];
+    [info1 addAnswer:@"呵呵呵呵呵" owner:@"Tom"];
+    [info1 addAnswer:@"呵呵呵dsafadsfdsafasdfdsf呵呵" owner:@"Tommy"];
+    [info1 setInfoOwner:@"hahah" questionTitle:@"我能不能睡觉？" questionContent:@"今天很困......."];
+    [self addExInfo:info1];
+    
+    D2ExInfo *info2 = [[D2ExInfo alloc] init];
+    [info2 addTag:@"发疯"];
+    [info2 addTag:@"酒驾"];
+    [info2 addTag:@"车祸"];
+    [info2 setInfoOwner:@"Tom" questionTitle:@"小学妹" questionContent:@"小学妹小学妹小学妹"];
+    [self addExInfo:info2];
+    
+    D2ExInfo *info3 = [[D2ExInfo alloc] init];
+    [info3 setInfoOwner:@"哈哈" questionTitle:@"test" questionContent:@"just for testasdfasdfasdfsdafsadfasdfsadfsafd"];
+    [info3 addAnswer:@"adsfdsafdsafdsfsdafas" owner:@"Testststts"];
+    [self addExInfo:info3];
+    
+    NSLog(@"Test Finished");
+}
+
 #pragma mark - UISearchBarDelegate
 
 // called when keyboard search button pressed
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     NSLog(@"%@", searchBar.text);
+    NSString *searchTag = searchBar.text;
+    NSMutableArray *indexArray = [self.tagDataDictionary objectForKey:searchTag];
+    if (indexArray == nil) {
+        NSLog(@"No Results");
+        
+        // Alert View
+        UIAlertView *noResultsAlert = [[UIAlertView alloc]initWithTitle:@"Sorry" message:[NSString stringWithFormat:@"No results for \"%@\"", searchTag] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [noResultsAlert show];
+    } else {
+        self.tableViewDataIndexArray = indexArray;
+        [self loadTableViewData];
+        [self.exInfoTableView reloadData];
+    }
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.tableViewDataArray.count;
+    if ([tableView.superview isEqual:self.infoDetailView]) {
+        return self.info.answerArray.count;
+    } else {
+        return self.tableViewDataArray.count;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    D2ExInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"exInfoCell"];
-    
-    if (cell == nil) {
-        cell = [[D2ExInfoCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"exInfoCell"];
+    if ([tableView.superview isEqual:self.infoDetailView]) {
+        D2AnswerCell *cell = (D2AnswerCell *)[tableView dequeueReusableCellWithIdentifier:@"answerCell"];
+        
+        if (cell == nil) {
+            cell = [[[NSBundle mainBundle]
+                     loadNibNamed:@"D2InfoDetailView" owner:self options:nil]
+                    lastObject];
+        }
+        
+        D2AnswerItem *answerItem = [self.info.answerArray objectAtIndex:indexPath.row];
+        [cell configureAnswerCell:answerItem.owner content:answerItem.answerContent];
+        
+        return cell;
+    } else {
+        D2ExInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"exInfoCell"];
+        
+        if (cell == nil) {
+            cell = [[D2ExInfoCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"exInfoCell"];
+        }
+        
+        [cell configureExInfoCellWithInfo:[self.tableViewDataArray objectAtIndex:indexPath.row]];
+        
+        return cell;
     }
-    
-    [cell configureExInfoCellWithInfo:[self.tableViewDataArray objectAtIndex:indexPath.row]];
-    
-    return cell;
 }
 
 #pragma mark - UITableViewDelegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([tableView.superview isEqual:self.infoDetailView]) {
+        return 80;
+    } else {
+        return 84;
+    }
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([tableView.superview isEqual:self.infoDetailView]) {
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    } else {
+        D2ExInfoCell *cell = (D2ExInfoCell *)[tableView cellForRowAtIndexPath:indexPath];
+        
+        CGRect frame = self.rightBgView.frame;
+        //    [self configureInfoDetailBgView];
+        self.infoDetailView = [[[NSBundle mainBundle] loadNibNamed:@"D2InfoDetailView" owner:self options:nil] objectAtIndex:0];
+        self.infoDetailView.frame = CGRectMake(0.5 * (frame.size.width - 750), 0.5 * (frame.size.height - 600), self.infoDetailView.frame.size.width, self.infoDetailView.frame.size.height);
+        self.info = [cell getExInfo];
+        [self.infoDetailView configureInfoDetailViewWithInfo:self.info];
+        [self.rightBgView addSubview:self.infoDetailView];
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }
+    
+}
 
 @end

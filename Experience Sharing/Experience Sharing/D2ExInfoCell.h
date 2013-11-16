@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *content;
 
 - (void)configureExInfoCellWithInfo:(D2ExInfo *)exInfo;
+- (D2ExInfo *)getExInfo;
 
 @end

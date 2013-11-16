@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2006E6511836083100B19B11 /* D2ExInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2006E6501836083100B19B11 /* D2ExInfoCell.m */; };
+		2051F25D183718900019BB35 /* D2InfoDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2051F25C183718900019BB35 /* D2InfoDetailView.m */; };
+		2051F25F1837423B0019BB35 /* D2InfoDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2051F25E1837423B0019BB35 /* D2InfoDetailView.xib */; };
+		2051F262183747B70019BB35 /* D2AnswerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2051F261183747B70019BB35 /* D2AnswerItem.m */; };
+		2051F2651837493D0019BB35 /* D2AnswerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2051F2641837493D0019BB35 /* D2AnswerCell.m */; };
 		20A7BEDA1835113E000392C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20A7BED91835113E000392C1 /* Foundation.framework */; };
 		20A7BEDC1835113E000392C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20A7BEDB1835113E000392C1 /* CoreGraphics.framework */; };
 		20A7BEDE1835113E000392C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20A7BEDD1835113E000392C1 /* UIKit.framework */; };
@@ -38,6 +42,13 @@
 /* Begin PBXFileReference section */
 		2006E64F1836083100B19B11 /* D2ExInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = D2ExInfoCell.h; sourceTree = "<group>"; };
 		2006E6501836083100B19B11 /* D2ExInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = D2ExInfoCell.m; sourceTree = "<group>"; };
+		2051F25B183718900019BB35 /* D2InfoDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = D2InfoDetailView.h; sourceTree = "<group>"; };
+		2051F25C183718900019BB35 /* D2InfoDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = D2InfoDetailView.m; sourceTree = "<group>"; };
+		2051F25E1837423B0019BB35 /* D2InfoDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = D2InfoDetailView.xib; sourceTree = "<group>"; };
+		2051F260183747B70019BB35 /* D2AnswerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = D2AnswerItem.h; sourceTree = "<group>"; };
+		2051F261183747B70019BB35 /* D2AnswerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = D2AnswerItem.m; sourceTree = "<group>"; };
+		2051F2631837493D0019BB35 /* D2AnswerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = D2AnswerCell.h; sourceTree = "<group>"; };
+		2051F2641837493D0019BB35 /* D2AnswerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = D2AnswerCell.m; sourceTree = "<group>"; };
 		20A7BED61835113E000392C1 /* Experience Sharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Experience Sharing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20A7BED91835113E000392C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		20A7BEDB1835113E000392C1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -90,8 +101,20 @@
 			children = (
 				2006E64F1836083100B19B11 /* D2ExInfoCell.h */,
 				2006E6501836083100B19B11 /* D2ExInfoCell.m */,
+				2051F2631837493D0019BB35 /* D2AnswerCell.h */,
+				2051F2641837493D0019BB35 /* D2AnswerCell.m */,
 			);
 			name = CustomCells;
+			sourceTree = "<group>";
+		};
+		2051F25A183718700019BB35 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				2051F25B183718900019BB35 /* D2InfoDetailView.h */,
+				2051F25C183718900019BB35 /* D2InfoDetailView.m */,
+				2051F25E1837423B0019BB35 /* D2InfoDetailView.xib */,
+			);
+			name = CustomViews;
 			sourceTree = "<group>";
 		};
 		20A7BECD1835113E000392C1 = {
@@ -131,6 +154,7 @@
 				20A7BEE91835113E000392C1 /* D2AppDelegate.m */,
 				20A7BEEB1835113E000392C1 /* Main.storyboard */,
 				20C8D42F18353BB4001C4212 /* ViewControllers */,
+				2051F25A183718700019BB35 /* CustomViews */,
 				2006E64E1836074900B19B11 /* CustomCells */,
 				20C8D43018353BE2001C4212 /* Data */,
 				20A7BEF11835113E000392C1 /* Images.xcassets */,
@@ -182,6 +206,8 @@
 			children = (
 				20C8D43118353C10001C4212 /* D2ExInfo.h */,
 				20C8D43218353C10001C4212 /* D2ExInfo.m */,
+				2051F260183747B70019BB35 /* D2AnswerItem.h */,
+				2051F261183747B70019BB35 /* D2AnswerItem.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -264,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20A7BEF21835113E000392C1 /* Images.xcassets in Resources */,
+				2051F25F1837423B0019BB35 /* D2InfoDetailView.xib in Resources */,
 				20A7BEE41835113E000392C1 /* InfoPlist.strings in Resources */,
 				20A7BEED1835113E000392C1 /* Main.storyboard in Resources */,
 			);
@@ -284,11 +311,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2051F262183747B70019BB35 /* D2AnswerItem.m in Sources */,
 				2006E6511836083100B19B11 /* D2ExInfoCell.m in Sources */,
 				20C8D43318353C10001C4212 /* D2ExInfo.m in Sources */,
 				20A7BEEA1835113E000392C1 /* D2AppDelegate.m in Sources */,
+				2051F25D183718900019BB35 /* D2InfoDetailView.m in Sources */,
 				20A7BEE61835113E000392C1 /* main.m in Sources */,
 				20A7BEF01835113E000392C1 /* D2ViewController.m in Sources */,
+				2051F2651837493D0019BB35 /* D2AnswerCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

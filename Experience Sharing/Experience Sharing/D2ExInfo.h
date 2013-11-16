@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "D2AnswerItem.h"
 
 @interface D2ExInfo : NSObject
 
@@ -19,8 +20,8 @@
 
 - (void)addTag:(NSString *)tag;
 - (void)removeTag:(NSString *)tag;
-- (void)addAnswer:(NSString *)answer;
-- (void)removeAnswer:(NSString *)answer;
+- (void)addAnswer:(NSString *)answerContent owner:(NSString *)owner;
+- (void)removeAnswer:(D2AnswerItem *)answerItem;
 - (void)setInfoOwner:(NSString *)owner
        questionTitle:(NSString *)questionTitle
      questionContent:(NSString *)questionContent;

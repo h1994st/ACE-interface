@@ -40,4 +40,10 @@
     self.content.text = exInfo.questionContent;
 }
 
+#pragma mark - Methods
+
+- (D2ExInfo *)getExInfo {
+    return self.exInfo;
+}
+
 @end

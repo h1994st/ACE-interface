@@ -15,6 +15,15 @@
 
 @implementation D2ExInfo
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        _answerArray = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
 #pragma mark - Properities
 
 - (NSMutableArray *)tagList {
@@ -34,12 +43,15 @@
     [self.tagList removeObject:tag];
 }
 
-- (void)addAnswer:(NSString *)answer {
-    [self.answerArray addObject:answer];
+- (void)addAnswer:(NSString *)answerContent owner:(NSString *)owner {
+    D2AnswerItem *answerItem = [[D2AnswerItem alloc] init];
+    answerItem.owner = owner;
+    answerItem.answerContent = answerContent;
+    [self.answerArray addObject:answerItem];
 }
 
-- (void)removeAnswer:(NSString *)answer {
-    [self.answerArray removeObject:answer];
+- (void)removeAnswer:(D2AnswerItem *)answerItem {
+    [self.answerArray removeObject:answerItem];
 }
 
 - (void)setInfoOwner:(NSString *)owner
