@@ -34,6 +34,14 @@
     [self.tagList removeObject:tag];
 }
 
+- (void)addAnswer:(NSString *)answer {
+    [self.answerArray addObject:answer];
+}
+
+- (void)removeAnswer:(NSString *)answer {
+    [self.answerArray removeObject:answer];
+}
+
 - (void)setInfoOwner:(NSString *)owner
        questionTitle:(NSString *)questionTitle
      questionContent:(NSString *)questionContent {

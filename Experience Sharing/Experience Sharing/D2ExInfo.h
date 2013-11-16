@@ -19,6 +19,8 @@
 
 - (void)addTag:(NSString *)tag;
 - (void)removeTag:(NSString *)tag;
+- (void)addAnswer:(NSString *)answer;
+- (void)removeAnswer:(NSString *)answer;
 - (void)setInfoOwner:(NSString *)owner
        questionTitle:(NSString *)questionTitle
      questionContent:(NSString *)questionContent;

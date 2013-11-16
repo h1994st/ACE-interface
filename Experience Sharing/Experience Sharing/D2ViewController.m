@@ -34,6 +34,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.tableViewDataArray = self.mainDataArray;
+    [self.viewOne setHidden:NO];
     
     // Test
     D2ExInfo *info1 = [[D2ExInfo alloc] init];
@@ -83,6 +84,40 @@
     return _tagDataDictionary;
 }
 
+- (NSMutableArray *)myQuestionIndexArray {
+    if (_myQuestionIndexArray == nil) {
+        _myQuestionIndexArray = [[NSMutableArray alloc] init];
+    }
+    return _myQuestionIndexArray;
+}
+
+- (NSMutableDictionary *)myQuestionDictionary {
+    if (_myQuestionDictionary == nil) {
+        _myQuestionDictionary = [[NSMutableDictionary alloc] init];
+        
+        //保留一个空标签的位置
+        [_myQuestionDictionary setObject:[[NSMutableArray alloc] init] forKey:@""];
+    }
+    return _myQuestionDictionary;
+}
+
+- (NSMutableArray *)myAnswerIndexArray {
+    if (_myAnswerIndexArray == nil) {
+        _myAnswerIndexArray = [[NSMutableArray alloc] init];
+    }
+    return _myAnswerIndexArray;
+}
+
+- (NSMutableDictionary *)myAnswerDictionary {
+    if (_myAnswerDictionary == nil) {
+        _myAnswerDictionary = [[NSMutableDictionary alloc] init];
+        
+        //保留一个空标签的位置
+        [_myAnswerDictionary setObject:[[NSMutableArray alloc] init] forKey:@""];
+    }
+    return _myAnswerDictionary;
+}
+
 #pragma mark - UI Methods
 
 // View One
@@ -117,29 +152,75 @@
 
 // View Two
 - (void)configureViewTwo {
-    
+    [self configureTagViewTwo];
 }
 
 - (void)configureTagViewTwo {
-    
+    int count = 0;
+    for (NSString *tag in self.myQuestionDictionary) {
+        if ([tag isEqualToString:@""]) {
+            count++;
+            continue;
+        }
+        
+        UIButton *btn;
+        switch (count) {
+            case 1: btn = self.myQuestionTagOne;        break;
+            case 2: btn = self.myQuestionTagTwo;        break;
+            case 3: btn = self.myQuestionTagThree;      break;
+            case 4: btn = self.myQuestionTagFour;       break;
+            case 5: btn = self.myQuestionTagFive;       break;
+            case 6: btn = self.myQuestionTagSix;        break;
+            default:                                    break;
+        }
+        [btn setHidden:NO];
+        [btn setTitle:tag forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(tagButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        count++;
+    }
 }
 
 // View Three
 - (void)configureViewThree {
-    
+    [self configureTagViewThree];
 }
 
 - (void)configureTagViewThree {
-    
+    int count = 0;
+    for (NSString *tag in self.myAnswerDictionary) {
+        if ([tag isEqualToString:@""]) {
+            count++;
+            continue;
+        }
+        
+        UIButton *btn;
+        switch (count) {
+            case 1: btn = self.myAnswerTagOne;      break;
+            case 2: btn = self.myAnswerTagTwo;      break;
+            case 3: btn = self.myAnswerTagThree;    break;
+            case 4: btn = self.myAnswerTagFour;     break;
+            case 5: btn = self.myAnswerTagFive;     break;
+            case 6: btn = self.myAnswerTagSix;      break;
+            default:                                break;
+        }
+        [btn setHidden:NO];
+        [btn setTitle:tag forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(tagButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        count++;
+    }
 }
 
 #pragma mark - Actions
 
 - (IBAction)experienceBoxButtonClicked:(UIButton *)sender {
     self.buttonView.backgroundColor = self.viewOne.backgroundColor;
-    self.viewOne.hidden = NO;
-    self.viewTwo.hidden = YES;
-    self.viewThree.hidden = YES;
+    [self.viewOne setHidden:NO];
+    [self.viewTwo setHidden:YES];
+    [self.viewThree setHidden:YES];
+    
+    [self.experienceBox setBackgroundColor:[UIColor whiteColor]];
+    [self.myQuestion setBackgroundColor:[UIColor lightGrayColor]];
+    [self.myAnswer setBackgroundColor:[UIColor lightGrayColor]];
     
     self.tableViewDataArray = self.mainDataArray;
     [self.exInfoTableView reloadData];
@@ -147,17 +228,34 @@
 
 - (IBAction)myQuestionButtonClicked:(UIButton *)sender {
     self.buttonView.backgroundColor = self.viewTwo.backgroundColor;
-    self.viewOne.hidden = YES;
-    self.viewTwo.hidden = NO;
-    self.viewThree.hidden = YES;
+    [self.viewOne setHidden:YES];
+    [self.viewTwo setHidden:NO];
+    [self.viewThree setHidden:YES];
     
+    [self.experienceBox setBackgroundColor:[UIColor lightGrayColor]];
+    [self.myQuestion setBackgroundColor:[UIColor whiteColor]];
+    [self.myAnswer setBackgroundColor:[UIColor lightGrayColor]];
+    
+    self.tableViewDataIndexArray = self.myQuestionIndexArray;
+    [self loadTableViewData];
+    [self configureViewTwo];
+    [self.myQuestionTableView reloadData];
 }
 
 - (IBAction)myAnswerButtonClicked:(UIButton *)sender {
     self.buttonView.backgroundColor = self.viewThree.backgroundColor;
-    self.viewOne.hidden = YES;
-    self.viewTwo.hidden = YES;
-    self.viewThree.hidden = NO;
+    [self.viewOne setHidden:YES];
+    [self.viewTwo setHidden:YES];
+    [self.viewThree setHidden:NO];
+    
+    [self.experienceBox setBackgroundColor:[UIColor lightGrayColor]];
+    [self.myQuestion setBackgroundColor:[UIColor lightGrayColor]];
+    [self.myAnswer setBackgroundColor:[UIColor whiteColor]];
+    
+    self.tableViewDataIndexArray = self.myAnswerIndexArray;
+    [self loadTableViewData];
+    [self configureViewThree];
+    [self.myAnswerTableView reloadData];
 }
 
 - (void)tagButtonClicked:(UIButton *)sender {
@@ -188,6 +286,13 @@
         [tagList addObject:@""];
     }
     
+    BOOL isMyQuestion = NO;
+    // 判断是否为自己的问题
+    if ([exInfo.owner isEqualToString:@"Tom"]) {
+        [self.myQuestionIndexArray addObject:index];
+        isMyQuestion = YES;
+    }
+    
     for (NSString *tag in tagList) {
         NSMutableArray *exIndexArray = [self.tagDataDictionary objectForKey:tag];
         if (!exIndexArray) {
@@ -196,7 +301,18 @@
             [self.tagDataDictionary setObject:exIndexArray forKey:tag];
         } else {
             [exIndexArray addObject:index];
-        };
+        }
+        
+        if (isMyQuestion) {
+            NSMutableArray *questionIndexArray = [self.myQuestionDictionary objectForKey:tag];
+            if (!questionIndexArray) {
+                questionIndexArray = [[NSMutableArray alloc] init];
+                [questionIndexArray addObject:index];
+                [self.myQuestionDictionary setObject:questionIndexArray forKey:tag];
+            } else {
+                [questionIndexArray addObject:index];
+            }
+        }
     }
 }
 
